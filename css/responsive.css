@@ -1,0 +1,65 @@
+@media (max-width:1100px){
+.navigation-a{
+    display: none;
+}
+.nav-a{
+    display: none;
+}
+}
+@media (max-width:800px){
+    .logo{
+        width: 300px;
+    }
+    
+
+    
+}
+@media(max-width:770px){
+    .places{
+        font-size: 20px;
+    }
+    .tickets{
+        font-size: 25px;
+    }
+
+}
+@media (max-width:620px){
+    .logo{
+        width: 180px;
+    }
+}
+@media(max-width:530px){
+    .logo{
+        width: 160px;
+    }
+}
+@media (max-width:490px){
+    .logo{
+        width: 150px;
+        margin-right: 20px;
+    }
+    .places{
+        font-size: 15px;
+    }
+}
+@media(max-width:440px){
+    .logo{
+        width: 100px;
+        margin-top: 40px;
+    }
+}
+@media(max-width:410px){
+    
+}
+@media (max-width:380px){
+    .navigation-li{
+        margin-right: 15px;
+    }
+    .nav-li{
+        margin-right:15px;
+    }
+}
+@media(max-width:335px){
+    
+
+}

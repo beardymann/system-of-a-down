@@ -1,0 +1,41 @@
+@font-face {
+    font-family: 'Ubuntu';
+    src: url('../fonts/Ubuntu-Light.woff2') format('woff2'),
+        url('../fonts/Ubuntu-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Ubuntu';
+    src: url('../fonts/Ubuntu-Regular.woff2') format('woff2'),
+        url('../fonts/Ubuntu-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Ubuntu';
+    src: url('../fonts/Ubuntu-Italic.woff2') format('woff2'),
+        url('../fonts/Ubuntu-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Baloo Chettan';
+    src: url('../fonts/BalooChettan-Regular.woff2') format('woff2'),
+        url('../fonts/BalooChettan-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Indie Flower';
+    src: url('..fonts/IndieFlower.woff2') format('woff2'),
+        url('../fonts/IndieFlower.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+
