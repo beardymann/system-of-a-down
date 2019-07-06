@@ -42,6 +42,9 @@ a {
 	text-decoration: none;
 	cursor: pointer;
 }
+a:hover{
+	text-decoration: none !important;
+}
 
 * {
 	box-sizing: border-box;
