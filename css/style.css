@@ -1,5 +1,5 @@
 body{
-    background: grey;
+    background: black;
 }
 .carousel-inner img {
     max-height: 800px;
@@ -118,4 +118,34 @@ body{
     font-family: 'Indie Flower';
     color: orange;
 }
+.section3{
+    background-color: black;
+}
+.photos{
+    font-size: 40px;
+    padding-top: 10px;
+    font-family: 'Indie Flower';
+    color:orange;
+}
+
+.loadmore{
+    font-size: 30px;
+    color: white;
+    text-align: center;
+    padding-bottom: 20px;
+}
+.loadmore:hover{
+    color: orange;
+}
+.store{
+    font-size: 40px;
+    padding-top: 10px;
+    font-family: 'Indie Flower';
+    color: orange;
+}
+.section4{
+    background-color: orangered;
+    padding: 100px;
+}
+
 
