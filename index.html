@@ -13,6 +13,7 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/fonts.css">
     <link rel="stylesheet" type="text/css" href="css/responsive.css">
+    <script src="js/main.js"></script>
     <title>System Of A Down</title>
 </head>
 
@@ -23,28 +24,72 @@
             <nav class="navigation">
                 <ul class="navigation-ul">
                     <li class="navigation-li">
-                       <a> <i class="fas fa-bars"></i></a>
-                        <a class="navigation-a" href="#">Menu</a>
+                        <div id="menu">
+                            <a> <i class="fas fa-bars"></i></a>
+                            <a class="navigation-a" href="#">Menu</a>
+                        </div>
+                        <div class="sub-menu" id="submenu-item">
+                            <ul>
+                                <li>
+                                    <a> <i class="far fa-calendar-alt"></i></a>
+                                    <a class="submenu-item" onclick="scrollToElement('tours')">Tours</a>
+                                </li>
+                                <li>
+                                    <a> <i class="fa fa-film"></i></a>
+                                    <a class="submenu-item" onclick="scrollToElement('video-gallery')">Video Gallery</a>
+                                </li>
+                                <li>
+                                    <a> <i class="fas fa-images"></i></a>
+                                    <a class="submenu-item" onclick="scrollToElement('photo-gallery')">Photo Gallery</a>
+                                </li>
+                                <li>
+                                    <a> <i class="fa fa-tags"></i></a>
+                                    <a class="submenu-item" onclick="scrollToElement('store')">Store</a>
+                                </li>
+                            </ul>
+                        </div>
                     </li>
                     <li class="navigation-li">
-                        <a><i class="fas fa-search"></i></a>
-                        <a class="navigation-a" href="#">Search</a>
+                        <div id="search">
+                            <a><i class="fas fa-search"></i></a>
+                            <a class="navigation-a" href="javascript:;">Search</a>
+                        </div>
+                        <div class="search-bar" id="search-bar">
+                            <form action="http://www.google.com/search" method="get" target="_blank" autocomplete="off">
+                                <input type="text" name="q" />
+                                <input type="submit" hidden />
+                            </form>
+                        </div>
                     </li>
                     <li class="navigation-li">
-                        <a><i class="fas fa-user"></i></a>
-                        <a class="navigation-a" href="#">Login</a>
+                        <div id="login">
+                            <a><i class="fas fa-user"></i></a>
+                            <a class="navigation-a" href="javascript:;">Login</a>
+                        </div>
+                        <div class="login-form" id="login-form">
+                            <input type="text" name="userName" placeholder="User Name" />
+                            <input type="text" name="search" placeholder="Password" />
+                        </div>
                     </li>
                 </ul>
             </nav>
             <span><img class="logo" src="img/logo.png" alt="logo"></span>
             <ul class="nav-ul">
                 <li class="nav-li">
-                    <a><i class="fas fa-user-plus"></i></a>
-                    <a class="nav-a" href="#">Sign Up</a>
+                    <div id="sign-up">
+                        <a><i class="fas fa-user-plus"></i></a>
+                        <a class="nav-a" href="javascript:;">Sign Up</a>
+                    </div>
+                    <div class="sign-up-form" id="sign-up-form">
+                        <input type="email" name="email" placeholder="Email" />
+                        <input type="text" name="userName" placeholder="User Name" />
+                        <input type="password" name="password" placeholder="Password" />
+                        <input type="text" name="phoneNumber" placeholder="Phone Number" />
+                    </div>
                 </li>
-                <li class="nav-li">
+                <li class="nav-li" onclick="scrollToElement('store');">
                     <a><i class="fas fa-shopping-cart"></i></a>
-                    <a class="nav-a" href="#">Store</a>
+                    <a class="nav-a" href="javascript:;">Store</a>
                 </li>
             </ul>
         </div>
@@ -63,75 +108,97 @@
             </div>
         </div>
     </div>
-    <div class="section">
-      <div class="container">      
-      <p class="tours"> WORLDWIRED tour 2018-2019 </p><br>
-      </div>
-      <div class="container">
-          <div class="parent">
-             <div class="tickets"> JUL   Berlin, Germany<br> 06   Olympiastadion</div>
-            <a> <div class="ticket"> Tickets </div> </a>
-          </div> 
-      </div><br>
-      <div class="container">
-          <div class="parent">
-              <div class="tickets"> JUL Gothenburg, Sweden <br> 09   ullevi</div>
-             <a> <div class="ticket"> Tickets </div> </a>
-          </div>
-      </div><br>
-      <div class="container">
-          <div class="parent">
-              <div class="tickets"> JUL Copenhagen, Denmark <br> 11   Telia Parken</div>
-             <a> <div class="ticket"> Tickets </div> </a>
-          </div>
-      </div><br>
-      <div class="container">
-          <div class="parent">
-               <div class="tickets"> JUL Trondheim, Norway <br> 13   Granasen</div>
-              <a> <div class="ticket"> Tickets </div> </a>
-          </div>
-      </div><br>
-      <div class="container">
-          <div class="parent">
-              <div class="tickets"> JUL Hameenlinna, Finland <br> 16   Kantolan Tapahtumapuisto</div>
-             <a> <div class="ticket"> Tickets </div> </a>
-          </div>
-      </div><br>
-      <div class="container">
-          <div class="parent">
-              <div class="tickets"> JUL Tartu, Estonia <br> 18   Raadi Airfield </div>
-             <a> <div class="ticket"> Tickets </div> </a>
-          </div>
-      </div><br>
-      <div class="container">
-          <div class="parent">
-              <div class="tickets"> JUL Tbilisi, Georgia <br> 21 Dinamo Arena :P </div>
-              <a> <div class="ticket"> Tickets </div> </a>
-          </div>
-      </div>     
+    <div class="section" id="tours">
+        <div class="container">
+            <p class="tours"> WORLDWIRED tour 2018-2019 </p><br>
+        </div>
+        <div class="container">
+            <div class="parent">
+                <div class="tickets"> JUL Berlin, Germany<br> 06 Olympiastadion</div>
+                <a>
+                    <div class="ticket"> Tickets </div>
+                </a>
+            </div>
+        </div><br>
+        <div class="container">
+            <div class="parent">
+                <div class="tickets"> JUL Gothenburg, Sweden <br> 09 ullevi</div>
+                <a>
+                    <div class="ticket"> Tickets </div>
+                </a>
+            </div>
+        </div><br>
+        <div class="container">
+            <div class="parent">
+                <div class="tickets"> JUL Copenhagen, Denmark <br> 11 Telia Parken</div>
+                <a>
+                    <div class="ticket"> Tickets </div>
+                </a>
+            </div>
+        </div><br>
+        <div class="container">
+            <div class="parent">
+                <div class="tickets"> JUL Trondheim, Norway <br> 13 Granasen</div>
+                <a>
+                    <div class="ticket"> Tickets </div>
+                </a>
+            </div>
+        </div><br>
+        <div class="container">
+            <div class="parent">
+                <div class="tickets"> JUL Hameenlinna, Finland <br> 16 Kantolan Tapahtumapuisto</div>
+                <a>
+                    <div class="ticket"> Tickets </div>
+                </a>
+            </div>
+        </div><br>
+        <div class="container">
+            <div class="parent">
+                <div class="tickets"> JUL Tartu, Estonia <br> 18 Raadi Airfield </div>
+                <a>
+                    <div class="ticket"> Tickets </div>
+                </a>
+            </div>
+        </div><br>
+        <div class="container">
+            <div class="parent">
+                <div class="tickets"> JUL Tbilisi, Georgia <br> 21 Dinamo Arena :P </div>
+                <a>
+                    <div class="ticket"> Tickets </div>
+                </a>
+            </div>
+        </div>
     </div>
-    <div class="section2">
+    <div class="section2" id="video-gallery">
         <div class="container">
             <p class="videos"> Video Gallery </p>
         </div>
         <div class="row mr-0 ml-0">
             <div class="col-12 text-center">
-                <iframe class="w-75 height" height="538" src="https://www.youtube.com/embed/L1vSHd2toWQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe class="w-75 height" height="538" src="https://www.youtube.com/embed/L1vSHd2toWQ" frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
             </div>
         </div>
         <div class="row mr-0 ml-0 pt-4 pb-4">
             <div class="col-12 col-md-6 col-sm-12 col-lg-6 text-right center">
-                <iframe class="w-75 height" height="380" src="https://www.youtube.com/embed/G10UXgX6Tas" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe class="w-75 height" height="380" src="https://www.youtube.com/embed/G10UXgX6Tas" frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
             </div>
             <div class="col-12 col-md-6 col-sm-12 col-lg-6 text-left center">
-                <iframe class="w-75 height" height="380" src="https://www.youtube.com/embed/2B32BUUmko0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe class="w-75 height" height="380" src="https://www.youtube.com/embed/2B32BUUmko0" frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
             </div>
         </div>
         <div class="container">
-                <a><p class="loadmore"> Load More </p></a>       
-     </div>
+            <a href="https://www.youtube.com/channel/UC7-YMmnc0ppcWmio8t1WdcA" target="_blank">
+                <p class="loadmore"> Load More </p>
+            </a>
+        </div>
     </div>
-    <div class="section3">
+    <div class="section3" id="photo-gallery">
         <div class="container">
             <p class="photos"> Photo Gallery </p>
         </div>
@@ -149,61 +216,55 @@
             </div>
         </div>
         <div class="row mr-0 ml-0 pt-4 pb-4">
-                <div class="col-12 col-md-6 col-sm-12 col-lg-6 text-right center">
-                        <img class="w-75" src="img/img4.jpg" alt="img4">
-                    </div>
-                    <div class="col-12 col-md-6 col-sm-12 col-lg-6 text-left center">
-                        <img class="w-75" src="img/img5.jpg" alt="img5">
-                    </div>
+            <div class="col-12 col-md-6 col-sm-12 col-lg-6 text-right center">
+                <img class="w-75" src="img/img4.jpg" alt="img4">
+            </div>
+            <div class="col-12 col-md-6 col-sm-12 col-lg-6 text-left center">
+                <img class="w-75" src="img/img5.jpg" alt="img5">
+            </div>
         </div>
         <div class="container">
-                   <a><p class="loadmore"> Load More </p></a>       
+            <a href="https://www.facebook.com/pg/systemofadown/photos/?ref=page_internal" target="_blank">
+                <p class="loadmore"> Load More </p>
+            </a>
         </div>
     </div>
-    <div class="section3">
+    <div class="section3" id="store">
         <div class="container">
             <p class="store"> Store </p>
         </div>
-         <div class="row mr-0 ml-0 pt-4">
-             <div class="col-12 col-md-6 col-sm-12 col-lg-6 text-right center">
-               <a><img class="w-50" src="img/clothe.jpg" alt="clothe"></a>
-             </div>
-             <div class="col-12 col-md-6 col-sm-12 col-lg-6 text-left center">
-                  <a><img class="w-50" src="img/clothe2.jpg" alt="clothe2"></a>
-            </div>    
+        <div class="row mr-0 ml-0 pt-4">
+            <div class="col-12 col-md-6 col-sm-12 col-lg-6 text-right center">
+                <a><img class="w-50" src="img/clothe.jpg" alt="clothe"></a>
+            </div>
+            <div class="col-12 col-md-6 col-sm-12 col-lg-6 text-left center">
+                <a><img class="w-50" src="img/clothe2.jpg" alt="clothe2"></a>
+            </div>
         </div>
         <div class="row mr-0 ml-0 pt-4 pb-4">
-                <div class="col-12 col-md-6 col-sm-12 col-lg-6 text-right center">
-                      <a><img class="w-50" src="img/clothe3.jpg" alt="clothe3"></a>
-                </div>
-                <div class="col-12 col-md-6 col-sm-12 col-lg-6 text-left center">
-                       <a><img class="w-50" src="img/clothe4.jpg" alt="clothe4"></a>
-                </div> 
+            <div class="col-12 col-md-6 col-sm-12 col-lg-6 text-right center">
+                <a><img class="w-50" src="img/clothe3.jpg" alt="clothe3"></a>
+            </div>
+            <div class="col-12 col-md-6 col-sm-12 col-lg-6 text-left center">
+                <a><img class="w-50" src="img/clothe4.jpg" alt="clothe4"></a>
+            </div>
         </div>
         <div class="container">
-                <a><p class="loadmore"> Load More </p></a>       
-     </div>
+            <a href="https://store.systemofadown.com/" target="_blank">
+                <p class="loadmore"> Load More </p>
+            </a>
+        </div>
     </div>
     <div class="section4">
-            <nav class="navigation">
-                    <ul class="navigation-ul">
-                        <li class="navigation-li">
-                            <a class="navigation-a" href="#">Home</a>
-                        </li>
-                        <li class="navigation-li">
-                            <a class="navigation-a" href="#">News</a>
-                        </li>
-                        <li class="navigation-li">
-                            <a class="navigation-a" href="#">About us</a>
-                        </li>
-                        <li class="navigation-li">
-                                <a class="navigation-a" href="#">Contact</a>
-                            </li>
-                    </ul>
-                </nav>   
+        <div class="footer-text">
+           <a href="index.html"><p class="foot-text"> Home </p></a>
+           <a href="https://systemofadown.com/category/news/" target="_blanket"> <p class="foot-text"> News </p></a>
+           <a href="https://systemofadown.com/albums/" target="_blanket"> <p class="foot-text"> Albums </p></a>
+           <a href="https://en.wikipedia.org/wiki/System_of_a_Down" target="_blanket"> <p class="foot-text"> About us </p></a>
+        </div>
     </div>
 
-    
+
 
     <script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js"
         integrity="sha384-0pzryjIRos8mFBWMzSSZApWtPl/5++eIfzYmTgBBmXYdhvxPc+XcFEk+zJwDgWbP"

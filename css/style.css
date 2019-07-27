@@ -23,7 +23,8 @@ body{
     margin-top: 30px;
     
 }
-.navigation-a{
+.navigation-a,
+.submenu-item{
     color: white;
     font-family: 'Baloo Chettan';
 }
@@ -146,6 +147,119 @@ body{
 .section4{
     background-color: orangered;
     padding: 100px;
+}
+.footer-text{
+    text-align: center;
+}
+.foot-text{
+    color: white;
+    font-size: 25px;
+}
+.foot-text:hover{
+    color: black;
+}
+
+.sub-menu {
+    text-align: left;
+    position: absolute;
+    margin-left: -10px;
+    display: none;
+    opacity: 0;
+}
+
+.sub-menu ul {
+    padding: 10px;
+}
+
+.sub-menu ul li {
+    color: white;
+    cursor: pointer;
+}
+
+.sub-menu ul li:not(:first-child) {
+    margin-top: 12px;
+}
+
+.sub-menu ul .submenu-item {
+    color: white;
+}
+
+.sub-menu ul .submenu-item:hover{
+    color: orange;
+}
+
+.show {
+    display: block !important;
+}
+
+.element-visible {
+    transition: 0.5s;
+    transition-timing-function: ease-in;
+    transform: translateY(0);
+    opacity: 1 !important;
+}
+
+
+.search-bar {
+    position: absolute;
+    margin-top: 5px;
+    padding: 5px;
+    display: none;
+    opacity: 0;
+}
+
+.search-bar input {
+    background-image: url('../img/search-icon.png');
+    background-position: 5px 6px;
+    background-repeat: no-repeat;
+    background-size: 20px;
+    padding-left: 30px;
+    width: 200px;
+}
+
+input:focus {
+    outline: none;
+}
+
+input {
+    padding-left: 10px;
+    border: none;
+}
+
+.login-form {
+    position: absolute;
+    width: 18%;
+    margin-top: 10px;
+    display: none;
+    opacity: 0;
+}
+
+.login-form input:not(:first-child) {
+    margin-top: 10px;
+}
+
+.login-form input{
+    width: 100%;
+    display: inline-block;
+  box-sizing: border-box;
+}
+
+.sign-up-form {
+    position: absolute;
+    width: 18%;
+    margin-top: 10px;
+    display: none;
+    opacity: 0;
+}
+
+.sign-up-form input:not(:first-child) {
+    margin-top: 10px;
+}
+
+.sign-up-form input{
+    width: 100%;
+    display: inline-block;
+  box-sizing: border-box;
 }
 
 
